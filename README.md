@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/team-machine-learning/teammy-bot.svg?branch=master)](https://travis-ci.org/team-machine-learning/teammy-bot)
+
 # teammy-bot
 
 Q&amp;A bot for Team International Latam
