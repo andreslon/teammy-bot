@@ -7,7 +7,7 @@
     "main": "./lib/index.js",
     "scripts": {
         "build": "tsc --build",
-        "lint": "tslint -c tslint.json 'src/**/*.ts'",
+        "lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
         "start": "node ./lib/index.js",
         "postinstall": "npm run build",
         "test": "npm run build",
@@ -28,6 +28,7 @@
         "@types/restify": "7.2.9",
         "nodemon": "~1.18.10",
         "tslint": "~5.14.0",
+        "tslint-config-airbnb": "^5.11.1",
         "typescript": "~3.3.3"
     }
 }
