@@ -6,8 +6,11 @@
     "license": "MIT",
     "main": "./lib/index.js",
     "scripts": {
+        "credentialgen": "node ./scripts/google.json.generator.js",
+        "prebuild": "npm run credentialgen",
         "build": "tsc --build",
         "lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
+        "prestart": "npm run build",
         "start": "node ./lib/index.js",
         "postinstall": "npm run build",
         "test": "npm run build",
@@ -19,13 +22,18 @@
     },
     "dependencies": {
         "botbuilder": "~4.4.0",
+        "botbuilder-dialogs": "^4.5.0",
         "config": "^3.1.0",
+        "dialogflow": "^0.10.2",
         "dotenv": "^7.0.0",
         "replace": "~1.1.0",
         "restify": "~8.2.0"
     },
     "devDependencies": {
+        "@types/config": "0.0.34",
+        "@types/dialogflow": "^0.9.4",
         "@types/dotenv": "6.1.0",
+        "@types/node": "^12.6.3",
         "@types/restify": "7.2.9",
         "nodemon": "~1.18.10",
         "tslint": "~5.14.0",

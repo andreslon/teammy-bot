@@ -2,14 +2,20 @@
 // Licensed under the MIT License.
 
 import { ActivityHandler } from 'botbuilder';
+import { DialogFlowRecognizer } from './recognizers';
 
 export class MyBot extends ActivityHandler {
   constructor() {
     super();
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
     this.onMessage(async (context, next): Promise <void> => {
-      await context.sendActivity(`You said '${ context.activity.text }'`);
+      process.env.GOOGLE_APPLICATION_CREDENTIALS = './google.json';
+      const dialogFlowRecognizer = new DialogFlowRecognizer();
+      const resp = await dialogFlowRecognizer.recognize(context.activity.text);
+
+      await context.sendActivity(resp);
             // By calling next() you ensure that the next BotHandler is run.
+
       await next();
     });
 

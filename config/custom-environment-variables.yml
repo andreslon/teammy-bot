@@ -1,0 +1,5 @@
+# To import GOOGLE_PRIVATE_KEY in system environment copy from "-----BEGIN PRIVATE KEY-----\n" to "\n-----END PRIVATE KEY-----\n"
+# and export GOOGLE_PRIVATE_KEY='contentFromPrivateKey'
+google:
+  private_key_id: GOOGLE_KEY_ID
+  private_key: GOOGLE_PRIVATE_KEY

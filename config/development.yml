@@ -1,0 +1,5 @@
+google: 
+  project_id: teamy-bot-scnpuq
+  client_email: dialogflow-saovqb@teamy-bot-scnpuq.iam.gserviceaccount.com
+  client_id: "111772971484592709616"
+  client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-saovqb%40teamy-bot-scnpuq.iam.gserviceaccount.com
