@@ -2,4 +2,4 @@
 # and export GOOGLE_PRIVATE_KEY='contentFromPrivateKey'
 google:
   private_key_id: GOOGLE_KEY_ID
-  private_key: GOOGLE_PRIVATE_KEY
+  decrypt_password: DECRYPT_PASSWORD
